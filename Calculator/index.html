@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="mystyle.css">
-    <meta http-equiv="refresh" content="10"/>
     <script src="app.js"></script>
 </head>
 
@@ -14,8 +13,8 @@
         <!--4 by 5 table of buttons -->
         <table>
             <tr row0>
-                <td ><button onclick="buttonClick('(')">(</button></td>
-                <td ><button onclick="buttonClick(')')">)</button></td>
+                <td ><button onclick="buttonClick(' (')">(</button></td>
+                <td ><button onclick="buttonClick(') ')">)</button></td>
                 <td ><button onclick="buttonClick('%')">%</button></td>
                 <td ><button onclick="buttonClick('C')">C</button></td>
 
@@ -49,24 +48,7 @@
 
             </tr>
         </table>
+        <p id="errorOutput"></p>
 
     </div>
 </div>
-
-<script>
-    function retainInput() {
-        var calculatorDisplayValue = document.getElementById("inputBox").textContent
-    }
-
-    function buttonClick(key){
-        usrInput = document.getElementById('inputBox').textContent;
-        if (key=="="){
-            content = eval(document.getElementById("inputBox").textContent)
-            document.getElementById("inputBox").textContent = content;
-        } else {
-            console.log(key,usrInput);
-            let content = usrInput.concat("",key);
-            document.getElementById("inputBox").textContent = content;
-        }
-    }
-</script>
