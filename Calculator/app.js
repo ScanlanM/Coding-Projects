@@ -30,11 +30,18 @@ function buttonClick(key){
 
 function parenHandler(usrInput){
     /*need to handle d paren and paren d since eval doesn't recognize this as implied multiplication*/
-    rexDParen = "(\d) \(";
-    rexParenD = "\) (\d)";
+
+    rexDParen = /(\d) \(/g;
+    rexDParenReplacement = "$1*\("
+
+    rexParenD = /\) (\d)/g;
+    rexParenDReplacement = ")*$1"
+
     stringtoEval = usrInput;
-    stringtoEval = stringtoEval.replaceAll(/(\d) \(/g, "$1*\(");
-    stringtoEval = stringtoEval.replaceAll(/\) (\d)/g,")*$1");
+
+    stringtoEval = stringtoEval.replaceAll(rexDParen,rexDParenReplacement);
+    stringtoEval = stringtoEval.replaceAll(rexParenD,rexParenDReplacement);
+
     return stringtoEval
 
 }
