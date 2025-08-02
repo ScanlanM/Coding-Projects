@@ -1,0 +1,12 @@
+body {
+    background-color: olivedrab;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+}
+.calcbtton {
+    text-align: center;
+    background-image: linear-gradient(brown, white)
+
+}

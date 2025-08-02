@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mystyle.css">
+    <meta http-equiv="refresh" content="10"/>
+    <script src="app.js"></script>
+</head>
+
+<div page>
+    <h1>Quick Calculator Project</h1>
+    <div calcBody> 
+        <p id="inputBox"></p>
+        <!--4 by 5 table of buttons -->
+        <table>
+            <tr row0>
+                <td ><button onclick="buttonClick('(')">(</button></td>
+                <td ><button onclick="buttonClick(')')">)</button></td>
+                <td ><button onclick="buttonClick('%')">%</button></td>
+                <td ><button onclick="buttonClick('C')">C</button></td>
+
+            </tr>
+            <tr row1>
+                <td ><button onclick="buttonClick('7')">7</button></td>
+                <td ><button onclick="buttonClick('8')">8</button></td> 
+                <td ><button onclick="buttonClick('9')">9</button></td>
+                <td ><button onclick="buttonClick('/')">/</button></td>
+
+            </tr>
+            <tr row2>
+                <td ><button onclick="buttonClick('4')">4</button></td>
+                <td ><button onclick="buttonClick('5')">5</button></td>
+                <td ><button onclick="buttonClick('6')">6</button></td>
+                <td ><button onclick="buttonClick('*')">*</button></td>
+
+            </tr>
+            <tr row3>
+                <td ><button onclick="buttonClick('1')">1</button></td>
+                <td ><button onclick="buttonClick('2')">2</button></td>
+                <td ><button onclick="buttonClick('3')">3</button></td>
+                <td ><button onclick="buttonClick('-')">-</button></td>
+
+            </tr>
+            <tr row4>
+                <td ><button onclick="buttonClick('0')">0</button></td>
+                <td ><button onclick="buttonClick('.')">.</button></td>
+                <td ><button onclick="buttonClick('=')">=</button></td>
+                <td ><button onclick="buttonClick('+')">+</button></td>
+
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+<script>
+    function retainInput() {
+        var calculatorDisplayValue = document.getElementById("inputBox").textContent
+    }
+
+    function buttonClick(key){
+        usrInput = document.getElementById('inputBox').textContent;
+        if (key=="="){
+            content = eval(document.getElementById("inputBox").textContent)
+            document.getElementById("inputBox").textContent = content;
+        } else {
+            console.log(key,usrInput);
+            let content = usrInput.concat("",key);
+            document.getElementById("inputBox").textContent = content;
+        }
+    }
+</script>
