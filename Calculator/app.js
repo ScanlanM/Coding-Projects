@@ -1,3 +1,7 @@
+window.onload = (event) => {
+    sizeInputBox()
+}
+
 function retainInput() {
     var calculatorDisplayValue = document.getElementById("inputBox").textContent
 }
@@ -7,22 +11,24 @@ function buttonClick(key){
     usrInput = document.getElementById('inputBox').textContent;
 
     if (key=="C"){
-        document.getElementById("inputBox").textContent = ""
+        /* Clear button to nbsp (\u00A0) to retain input box formatting*/
+        document.getElementById("inputBox").textContent = "\u00A0";
 
     } else if (key=="="){
 
         try {
             stringtoEval = parenHandler(document.getElementById("inputBox").textContent)
+            /*eval() is in use here, but shouldn't be used in a production environment for safety/security reasons*/
             results = eval(stringtoEval)
             document.getElementById("inputBox").textContent = results
+            document.getElementById("errorOutput").innerHTML = "";
         }
         catch(err) {
             document.getElementById("errorOutput").innerHTML = err.message;
         }
         
     } else {
-        console.log(key,usrInput);
-        let content = usrInput.concat("",key);
+        content = usrInput.concat("",key);
         document.getElementById("inputBox").textContent = content;
     }
     
@@ -44,4 +50,11 @@ function parenHandler(usrInput){
 
     return stringtoEval
 
+}
+function sizeInputBox(){
+    calcBody = document.getElementById("calcBody")
+    inputBox = document.getElementById('inputBox')
+
+    width = window.getComputedStyle(calcBody).getPropertyValue('width');
+    inputBox.style.width = width
 }

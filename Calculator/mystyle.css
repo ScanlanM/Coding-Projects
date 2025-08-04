@@ -2,11 +2,27 @@ body {
     background-color: olivedrab;
     font-family: Arial, Helvetica, sans-serif;
 }
-h1 {
+.projName {
     text-align: center;
 }
-.calcbtton {
+.button {
     text-align: center;
-    background-image: linear-gradient(brown, white)
+    background-image: linear-gradient(gray, white);
+    border-radius: 4px;
+    width:25%;
+    height:25%;
+    padding: 15px;
+    box-sizing : content-box;
 
+}
+.boxIn {
+    outline-style:solid;
+    display:inline-flexbox;
+    overflow:hidden;
+}
+.calcBody{
+    position:relative;
+    display:inline-block;
+    outline-style:solid;
+    border-radius: 4px;
 }
