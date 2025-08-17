@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from elevenlabs.client import ElevenLabs
 from elevenlabs import play
+
 import os
 
 load_dotenv()
@@ -8,7 +9,9 @@ load_dotenv()
 api_key = os.getenv("ELEVENLABS_API_KEY")
 
 client = ElevenLabs(
+
     api_key=api_key
+
 )
 
 textToRead = "Place holder text, to be updated beyond MVP"

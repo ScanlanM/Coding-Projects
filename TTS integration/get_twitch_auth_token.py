@@ -1,8 +1,10 @@
+from dotenv import load_dotenv
+
+from cachetools import cached, TTLCache
+import json
 import os
 import requests
-from dotenv import load_dotenv
-import json
-from cachetools import cached, TTLCache
+
 
 @cached(cache=TTLCache(maxsize=2, ttl=14200))  # TODO fix caching
 def get_auth_token():

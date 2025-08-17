@@ -1,9 +1,11 @@
-from get_twitch_auth_token import get_auth_token
 from dotenv import load_dotenv
+
 import os
 import requests
 import json
 import logging
+
+from get_twitch_auth_token import get_auth_token
 
 
 def create_twitch_chat_event_sub(session_id):
