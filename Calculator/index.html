@@ -1,53 +1,52 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quick Calculator Project</title>
     <link rel="stylesheet" href="mystyle.css">
-    <script src="app.js"></script>
 </head>
-
-<div id="page">
-    <div class="calcBody" id="calcBody"> 
-        <p class="projName">Quick Calculator Project</p>
-        <p class="boxIn" id="inputBox">&nbsp;</p>
-        <!--4 by 5 table of buttons -->
-        <table>
-            <tr id="row0">
-                <td ><button class="button" onclick="buttonClick(' (')">(</button></td>
-                <td ><button class="button" onclick="buttonClick(') ')">)</button></td>
-                <td ><button class="button" onclick="buttonClick('%')">%</button></td>
-                <td ><button class="button" onclick="buttonClick('C')">C</button></td>
-
-            </tr>
-            <tr id="row1">
-                <td ><button class="button" onclick="buttonClick('7')">7</button></td>
-                <td ><button class="button" onclick="buttonClick('8')">8</button></td> 
-                <td ><button class="button" onclick="buttonClick('9')">9</button></td>
-                <td ><button class="button" onclick="buttonClick('/')">/</button></td>
-
-            </tr>
-            <tr id="row2">
-                <td ><button class="button" onclick="buttonClick('4')">4</button></td>
-                <td ><button class="button" onclick="buttonClick('5')">5</button></td>
-                <td ><button class="button" onclick="buttonClick('6')">6</button></td>
-                <td ><button class="button" onclick="buttonClick('*')">*</button></td>
-
-            </tr>
-            <tr id="row3">
-                <td ><button class="button" onclick="buttonClick('1')">1</button></td>
-                <td ><button class="button" onclick="buttonClick('2')">2</button></td>
-                <td ><button class="button" onclick="buttonClick('3')">3</button></td>
-                <td ><button class="button" onclick="buttonClick('-')">-</button></td>
-
-            </tr>
-            <tr id="row4">
-                <td ><button class="button" onclick="buttonClick('0')">0</button></td>
-                <td ><button class="button" onclick="buttonClick('.')">.</button></td>
-                <td ><button class="button" onclick="buttonClick('=')">=</button></td>
-                <td ><button class="button" onclick="buttonClick('+')">+</button></td>
-
-            </tr>
-        </table>
+<body>
+    <div id="page">
+        <div class="calcBody" id="calcBody">
+            <p class="projName">Quick Calculator Project</p>
+            <p class="boxIn" id="inputBox">&nbsp;</p>
+            <!-- 4 by 5 table of buttons -->
+            <table>
+                <tr id="row0">
+                    <td><button class="button" onclick="buttonClick(' (')">(</button></td>
+                    <td><button class="button" onclick="buttonClick(') ')">)</button></td>
+                    <td><button class="button" onclick="buttonClick('%')">%</button></td>
+                    <td><button class="button" onclick="buttonClick('C')">C</button></td>
+                </tr>
+                <tr id="row1">
+                    <td><button class="button" onclick="buttonClick('7')">7</button></td>
+                    <td><button class="button" onclick="buttonClick('8')">8</button></td>
+                    <td><button class="button" onclick="buttonClick('9')">9</button></td>
+                    <td><button class="button" onclick="buttonClick('/')">/</button></td>
+                </tr>
+                <tr id="row2">
+                    <td><button class="button" onclick="buttonClick('4')">4</button></td>
+                    <td><button class="button" onclick="buttonClick('5')">5</button></td>
+                    <td><button class="button" onclick="buttonClick('6')">6</button></td>
+                    <td><button class="button" onclick="buttonClick('*')">*</button></td>
+                </tr>
+                <tr id="row3">
+                    <td><button class="button" onclick="buttonClick('1')">1</button></td>
+                    <td><button class="button" onclick="buttonClick('2')">2</button></td>
+                    <td><button class="button" onclick="buttonClick('3')">3</button></td>
+                    <td><button class="button" onclick="buttonClick('-')">-</button></td>
+                </tr>
+                <tr id="row4">
+                    <td><button class="button" onclick="buttonClick('0')">0</button></td>
+                    <td><button class="button" onclick="buttonClick('.')">.</button></td>
+                    <td><button class="button" onclick="buttonClick('=')">=</button></td>
+                    <td><button class="button" onclick="buttonClick('+')">+</button></td>
+                </tr>
+            </table>
+        </div>
+        <p id="errorOutput"></p>
     </div>
-    <p id="errorOutput"></p>
-</div>
+    <script src="app.js"></script>
+</body>
+</html>

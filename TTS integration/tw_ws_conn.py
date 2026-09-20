@@ -1,9 +1,10 @@
 import aiohttp
+
 import asyncio
+from contextlib import suppress
 import json
 import sys
 import traceback
-from contextlib import suppress
 
 from subscribe_to_twitch_events import create_twitch_chat_event_sub
 
