@@ -1,3 +1,19 @@
-<a
-    href="https://id.twitch.tv/oauth2/authorize?client_id=57lzvviibjy72h51ux0ledoaonq1py&response_type=code&scope=user%3Aread%3Achat&redirect_uri=http%3A%2F%2Flocalhost">Connect
-    with Twitch</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect with Twitch</title>
+</head>
+<body>
+    <a href="https://id.twitch.tv/oauth2/authorize?client_id=57lzvviibjy72h51ux0ledoaonq1py&response_type=code&scope=user%3Aread%3Achat&redirect_uri=http%3A%2F%2Flocalhost">
+        Connect with Twitch
+    </a>
+    <p>
+        After you approve access, Twitch redirects to
+        <code>http://localhost/?code=...</code>. Copy the value of the
+        <code>code</code> query parameter into <code>MY_AUTH_TWITCH_CODE</code>
+        in your <code>.env</code> file. You only need to do this once; the
+        app refreshes its own token after that.
+    </p>
+</body>
+</html>

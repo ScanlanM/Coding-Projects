@@ -1,6 +1,7 @@
 .env
 .venv
 .txt
+.twitch_token_cache.json
 
 #VSCode ignore
 
